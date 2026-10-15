@@ -158,18 +158,24 @@ a { color: inherit; text-decoration: none; }
   fill: none; stroke: var(--ink); stroke-width: 1.3; stroke-linecap: round; stroke-linejoin: round;
 }
 
-/* дом */
+/* дом: привязан к углу крыши левого блока (точка 205×325 на фото),
+   чтобы «Ь» и «А» заходили за него одинаково при любом размере дома */
 .hero__house {
+  --house-w: 52vw;
   position: absolute; z-index: 3; margin: 0;
-  right: calc(var(--house-w) * -0.09);
-  /* низ дома всегда уходит за край экрана, даже на 4:3 */
-  top: max(11.25vw, calc(100svh - var(--house-w) * .75 + 2vh));
   width: var(--house-w);
-  --house-w: 70vw;
+  left: calc(45.7vw - var(--house-w) * .1416);
+  top: calc(27vw - var(--house-w) * .2245);
   will-change: transform;
-  /* верхний срез фото растворяется в небе */
-  -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 11%);
-          mask-image: linear-gradient(180deg, transparent 0%, #000 11%);
+  /* края фото растворяются в небе: сверху, справа и снизу */
+  -webkit-mask-image:
+    linear-gradient(180deg, transparent 0%, #000 7%, #000 90%, transparent 100%),
+    linear-gradient(270deg, transparent 0%, #000 16%);
+  -webkit-mask-composite: source-in;
+          mask-image:
+    linear-gradient(180deg, transparent 0%, #000 7%, #000 90%, transparent 100%),
+    linear-gradient(270deg, transparent 0%, #000 16%);
+          mask-composite: intersect;
 }
 .hero__house img { display: block; width: 100%; height: auto; }
 .hero__dims {
@@ -247,10 +253,11 @@ a { color: inherit; text-decoration: none; }
   .hero__lead { order: 1; margin-bottom: 14px; }
   .hero__title { order: 2; position: relative; z-index: 2; font-size: clamp(36px, 11.6vw, 72px); }
   .hero__house {
-    order: 3; position: relative; right: auto; top: auto;
+    order: 3; position: relative; left: auto; top: auto;
     width: 128vw; margin: -15vw 0 0 10vw; --house-w: 128vw;
     -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 12%, #000 80%, transparent 100%);
             mask-image: linear-gradient(180deg, transparent 0%, #000 12%, #000 80%, transparent 100%);
+    -webkit-mask-composite: source-over; mask-composite: add;
   }
   .hero__rule { order: 4; margin: 0 0 18px; }
   .hero__text { order: 5; max-width: none; font-size: 16px; }
