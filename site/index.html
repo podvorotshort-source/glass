@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ДизайнСтекло — конструкции из стекла в Тольятти и Самаре</title>
+  <meta name="description" content="Перегородки, душевые, ограждения, лестницы и двери из закалённого стекла. Собственное производство в Тольятти: замер, изготовление и монтаж.">
+  <link rel="icon" href="assets/logo-mark.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&family=Unbounded:wght@300;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/house.webp" imagesrcset="assets/house-900.webp 900w, assets/house.webp 1448w" imagesizes="(max-width: 760px) 140vw, 70vw">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="/" aria-label="ДизайнСтекло, на главную">
+    <img class="brand__mark" src="assets/logo-mark.png" width="60" height="30" alt="">
+    <span class="brand__name">Дизайн<br>Стекло</span>
+  </a>
+  <nav class="topnav" aria-label="Основное меню">
+    <a href="#catalog">Каталог</a>
+    <a href="#works">Портфолио</a>
+    <a href="#articles">Статьи</a>
+    <a href="#about">О компании</a>
+    <a href="#contacts">Контакты</a>
+  </nav>
+  <div class="topbar__contact">
+    <a class="topbar__phone" href="tel:+79278913800">+7 927 891-38-00</a>
+    <a class="btn btn--ghost btn--sm" href="#request">
+      <span class="btn__glint" aria-hidden="true"></span>
+      <span class="btn__frame" aria-hidden="true"></span>
+      <span class="btn__label">Заказать замер</span>
+    </a>
+  </div>
+</header>
+
+<main>
+  <section class="hero" aria-labelledby="hero-title">
+    <!-- чертёжные линии за домом -->
+    <svg class="hero__guides" data-speed="0.12" data-speed-stacked="0.06" aria-hidden="true" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
+      <circle class="draw" pathLength="1" cx="1180" cy="150" r="74" />
+      <line class="draw" pathLength="1" x1="1060" y1="150" x2="1440" y2="150" />
+      <line class="draw" pathLength="1" x1="1180" y1="40" x2="1180" y2="300" />
+    </svg>
+
+    <div class="hero__copy" data-speed="-0.14">
+      <p class="hero__lead reveal" style="--d:.15s">Производство и монтаж в&nbsp;Тольятти и&nbsp;Самаре</p>
+      <h1 class="hero__title" id="hero-title">
+        <span class="line"><span class="reveal" style="--d:.25s">Лёгкость</span></span>
+        <span class="line line--light"><span class="reveal" style="--d:.38s">стекла</span></span>
+      </h1>
+      <span class="hero__rule reveal" style="--d:.55s" aria-hidden="true"></span>
+      <p class="hero__text reveal" style="--d:.6s">Перегородки, душевые, ограждения и&nbsp;лестницы из&nbsp;закалённого стекла. Своё производство: проектируем, изготавливаем и&nbsp;монтируем под ваш размер.</p>
+      <div class="hero__actions reveal" style="--d:.7s">
+        <a class="btn btn--solid" href="#request">
+          <span class="btn__glint" aria-hidden="true"></span>
+          <span class="btn__frame" aria-hidden="true"></span>
+          <span class="btn__label">Рассчитать стоимость</span>
+        </a>
+        <a class="btn btn--ghost" href="#works">
+          <span class="btn__glint" aria-hidden="true"></span>
+          <span class="btn__frame" aria-hidden="true"></span>
+          <span class="btn__label">Смотреть работы</span>
+        </a>
+      </div>
+      <ul class="hero__facts reveal" style="--d:.82s">
+        <li>
+          <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 27V5h22v22z"/><path d="M5 20l7-7 5 5 4-4 6 6"/><path d="M9 9h4"/></svg>
+          <span>Любая сложность<br>по&nbsp;эскизу</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4v24"/><path d="M8 8h16M8 24h16"/><circle cx="16" cy="16" r="3.5"/></svg>
+          <span>Надёжная<br>фурнитура</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3l10 4v8c0 7-4.5 11-10 14C10.5 26 6 22 6 15V7z"/><path d="M11.5 15.5l3.2 3.2 6-6.2"/></svg>
+          <span>Гарантия<br>и&nbsp;сервис</span>
+        </li>
+      </ul>
+    </div>
+
+    <figure class="hero__house" data-speed="0.32" data-speed-stacked="-0.12">
+      <img src="assets/house.webp" srcset="assets/house-900.webp 900w, assets/house.webp 1448w" sizes="(max-width: 760px) 140vw, 70vw" width="1448" height="1086" alt="Дом со стеклянными ограждениями балконов и лестницы">
+      <!-- размерные линии поверх дома, в координатах картинки -->
+      <svg class="hero__dims" viewBox="0 0 1448 1086" aria-hidden="true">
+        <g class="dim">
+          <line class="draw" pathLength="1" x1="1160" y1="455" x2="1160" y2="740" />
+          <line class="draw" pathLength="1" x1="1142" y1="455" x2="1178" y2="455" />
+          <line class="draw" pathLength="1" x1="1142" y1="740" x2="1178" y2="740" />
+          <text x="1176" y="604" transform="rotate(-90 1176 604)">1100</text>
+        </g>
+      </svg>
+    </figure>
+
+    <nav class="hero__cats reveal" style="--d:.95s" aria-label="Направления">
+      <a href="#peregorodki">Перегородки</a>
+      <a href="#dushevye">Душевые</a>
+      <a href="#ograzhdeniya">Ограждения</a>
+      <a href="#lestnicy">Лестницы</a>
+      <a href="#dveri">Двери</a>
+      <a href="#loft">Лофт</a>
+    </nav>
+  </section>
+
+  <!-- дальше по странице: пока заглушка, чтобы был виден параллакс -->
+  <section class="next" id="about">
+    <div class="next__inner">
+      <h2>Своё производство в&nbsp;Тольятти</h2>
+      <p>Проектируем, изготавливаем и&nbsp;устанавливаем сами, поэтому берёмся за&nbsp;нестандартные проекты и&nbsp;отвечаем за&nbsp;результат от&nbsp;замера до&nbsp;монтажа.</p>
+      <dl class="next__contacts" id="contacts">
+        <div><dt>Офис</dt><dd>Тольятти, Коммунальная&nbsp;32, ТЦ&nbsp;«Арбуз», офис&nbsp;305</dd></div>
+        <div><dt>Телефон</dt><dd><a href="tel:+79278913800">+7 927 891-38-00</a></dd></div>
+        <div><dt>Почта</dt><dd><a href="mailto:steklotlt@mail.ru">steklotlt@mail.ru</a></dd></div>
+        <div><dt>Отдел продаж</dt><dd>Будни, 9:00–18:00</dd></div>
+      </dl>
+    </div>
+  </section>
+</main>
+
+<script src="main.js" defer></script>
+</body>
+</html>
