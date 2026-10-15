@@ -140,6 +140,19 @@
   addEventListener("resize", onScroll);
   mark(0);
   onScroll();
+
+  // заход по ссылке вида …/#cat-loft (в том числе со старых адресов сайта)
+  const fromHash = slides.findIndex((s) => "#" + s.id === location.hash);
+  if (fromHash >= 0) {
+    addEventListener("load", () => {
+      if (stacked.matches) {
+        catalog.scrollIntoView();
+        strip.scrollLeft = slides[fromHash].offsetLeft - strip.offsetLeft - parseFloat(getComputedStyle(strip).paddingLeft);
+      } else {
+        scrollTo({ top: topOf(fromHash), behavior: "instant" });
+      }
+    }, { once: true });
+  }
 })();
 
 // Работы: фильтр по направлениям, «Показать ещё» и просмотр фото на весь экран.

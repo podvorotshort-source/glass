@@ -4,7 +4,7 @@
   "description": "Сайт ДизайнСтекло: статичные страницы + стеклянные папки статей на React",
   "scripts": {
     "build:folders": "esbuild web/articles.tsx --bundle --minify --format=esm --target=es2020 --jsx=automatic --define:process.env.NODE_ENV=\\\"production\\\" --outfile=site/assets/articles.js",
-    "build:articles": "python tools/build_articles.py",
+    "build:articles": "python tools/build_articles.py && python tools/build_pages.py",
     "build": "npm run build:articles && npm run build:folders"
   },
   "devDependencies": {

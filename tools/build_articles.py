@@ -123,7 +123,7 @@ def footer(root):
     </a>
     <p>Тольятти, Коммунальная&nbsp;32, ТЦ&nbsp;«Арбуз», офис&nbsp;305<br>
       <a href="tel:+79278913800">+7 927 891-38-00</a>, <a href="mailto:steklotlt@mail.ru">steklotlt@mail.ru</a></p>
-    <p class="footer__small">Конструкции из стекла: проектирование, производство, монтаж. Тольятти, Самара и область.</p>
+    <p class="footer__small">Конструкции из стекла: проектирование, производство, монтаж. Тольятти, Самара и область. <a href="{root}politika-obrabotki-personalnyx-dannyx/">Обработка персональных данных</a>, <a href="{root}politika-konfidencialnosti/">конфиденциальность</a>.</p>
   </div>
 </footer>'''
 
@@ -182,7 +182,7 @@ def redirect_page(target):
 <meta http-equiv="refresh" content="0; url={target}">
 <link rel="canonical" href="{target}">
 <title>ДизайнСтекло</title></head>
-<body><p><a href="{target}">Перейти в каталог</a></p></body></html>
+<body><p><a href="{target}">Перейти на сайт</a></p></body></html>
 '''
 
 
@@ -306,7 +306,7 @@ def main():
   <section class="articles" id="articles" aria-labelledby="articles-title">
     <div class="articles__head">
       <h2 id="articles-title">Статьи</h2>
-      <p>Разложили по&nbsp;папкам. Наведите на&nbsp;папку, чтобы заглянуть внутрь, нажмите, чтобы достать статьи.</p>
+      <p>Разложили по&nbsp;папкам. Откройте папку, чтобы достать статьи.</p>
     </div>
     <div class="articles__grid" id="articles-folders">
       <ul class="articles__fallback">{fallback}</ul>
