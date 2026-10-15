@@ -1,0 +1,17 @@
+{
+  "name": "glass",
+  "private": true,
+  "description": "Сайт ДизайнСтекло: статичные страницы + стеклянные папки статей на React",
+  "scripts": {
+    "build:folders": "esbuild web/articles.tsx --bundle --minify --format=esm --target=es2020 --jsx=automatic --define:process.env.NODE_ENV=\\\"production\\\" --outfile=site/assets/articles.js",
+    "build:articles": "python tools/build_articles.py",
+    "build": "npm run build:articles && npm run build:folders"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  },
+  "dependencies": {
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  }
+}
